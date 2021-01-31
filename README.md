@@ -1,8 +1,8 @@
 # Cognitive Experiments with Openbci and LSL
-A guide on how to run cognitive experiments with openBCI and lsl streaming layer. 
+A guide on how to run cognitive experiments with openBCI and lsl streaming layer. Currently, in Python, as matlab still seems to have too many issues.
 
 ## Setup
-The number of combinations of platforms, system libraries, toolchains, and matlab versions means that things are unlikely to work out of the box for you. Personally I began with an El Capitan macOS, lsl v1.14.0, and matlab 2015b with the latest openBCI GUI running with cyton+daisy setup. I quickly ran into mex issues and spent had to download Xcode 7 which built max files that didn't compile on macOS 10.11. The particular setup that ended up workign for me was macOS high sierra (10.13.6), matlab to 2017b, liblsl 1.13.1 and building the mex files with Xcode 9.
+The number of combinations of platforms, system libraries, toolchains, and matlab / python versions means that things are unlikely to work out of the box for you. Personally I began with an El Capitan macOS, lsl v1.14.0, and matlab 2015b with the latest openBCI GUI running with cyton+daisy setup. I quickly ran into mex issues and spent had to download Xcode 7 which built max files that didn't compile on macOS 10.11. The particular setup that ended up workign for me was macOS high sierra (10.13.6), matlab to 2017b, liblsl 1.13.1 and building the mex files with Xcode 9.
 
 There is no was to tackle every concievable problem, but the following are some pointers I hope can be of assitance:
  - Even after you download the dylib files you might have to manually relink "liblsl.dylib" to "liblsl64.1.13.1.dylib", not that if you are running "buid_mex" and you get "Could not locate the file "liblsl.dylib" on your computer. Attempting to download..." then there is an issue.
